@@ -13,6 +13,12 @@ on:
   # Run tests for any PRs.
   pull_request:
 
+  schedule:
+    - cron: '30 2 * * 4'
+      branches:
+        - master
+      tags:
+        - v*
 env:
   IMAGE_NAME: mattberther/https-redirect
 
